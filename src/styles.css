@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: rgb(255, 233, 170);
+  background: linear-gradient(90deg, rgba(255, 233, 170, 1) 16%, rgba(220, 220, 223, 1) 63%, rgba(241, 233, 59, 1) 100%);
+}
+a {
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+:host(app-update-product),
+.mat-dialog-actions {
+  margin-top: 100px;
+  gap: 5px
+}
+img {
+  max-width: 20%;
+}

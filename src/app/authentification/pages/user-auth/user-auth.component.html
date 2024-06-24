@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <mat-card>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <h2>Connexion</h2>
+          <div *ngIf="errorMessage" class="alert alert-danger" style="background-color: #df9595">
+            {{ errorMessage }}
+          </div>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Nom de l'utilisateur</mat-label>
+            <input matInput type="text" formControlName="username">
+            <mat-error *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+              Nom de l'utilisateur est obligatoire
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput type="password" formControlName="password" [type]="hide ? 'password' : 'text'" [maxlength]="maxLength">
+            <mat-icon class="material-icons-outlined" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" autocomplete="current-password">
+              Mot de passe obligatoire
+            </mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Se connecter</button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div mat-dialog-title>
+  <h2 class="text-center">{{ popupTitle }}</h2>
+</div>
+<div mat-dialog-content [formGroup]="saveProductForm">
+  <div class="form-group" style="padding-top: 15px;">
+    <label for="title">Titre<span class="text-danger"> *</span> : </label>
+    <input type="text" id="title" formControlName="title" class="form-control">
+  </div>
+  <div class="form-group" style="padding-top: 15px;">
+    <label for="price">Prix<span class="text-danger"> *</span> : </label>
+    <input type="number" id="price" formControlName="price" class="form-control">
+  </div>
+  <div class="form-group" style="padding-top: 15px;">
+    <label for="description">Description<span class="text-danger"> *</span> : </label>
+    <textarea class="form-control"
+              id="description"
+              formControlName="description">
+    </textarea>
+  </div>
+  <div class="form-group" style="padding-top: 15px;">
+    <label for="category">Catégorie<span class="text-danger"> *</span> : </label>
+    <input type="text" id="category" formControlName="category" class="form-control">
+  </div>
+  <div class="form-group" style="padding-top: 15px;">
+    <label for="image">Image<span class="text-danger"> *</span> : </label>
+    <input type="text" id="image" formControlName="image" class="form-control">
+  </div>
+</div>
+<div class="card-img text-center">
+  <img src="{{data?.image }}" alt="{{data?.description}}">
+</div>
+<div mat-dialog-actions>
+  <button (click)="onClose()" class="btn btn-secondary">Annuler</button>
+  <button *ngIf="!data?.isReadOnly" (click)="onValidate()" class="btn btn-primary" [disabled]="saveProductForm.invalid">Enregistrer</button>
+</div>

@@ -1,0 +1,10 @@
+:host(app-user-auth),
+form {
+  mat-form-field {
+    padding-bottom: 15px;
+  }
+}
+
+mat-card {
+  padding: 20px;
+}

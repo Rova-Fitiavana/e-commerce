@@ -1,0 +1,46 @@
+.container-dashboard {
+  background: #1abc9c;
+  box-shadow: -3px 3px 6px -1px rgba(0, 0, 0, 0.73);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+  .item:nth-child(1) {
+    text-align: end;
+  }
+
+  .item:nth-child(2) {
+    text-align: center;
+  }
+
+  .item:nth-child(4) {
+    text-align: end;
+    margin-right: 20px;
+  }
+
+  h2 {
+    color: ghostwhite;
+  }
+
+  .item table {
+    left: auto;
+    margin-top: 20px;
+    width: 100%;
+    align-self: center;
+
+    tbody tr td img {
+      max-width: 50%;
+    }
+
+    .actions i svg {
+      padding-bottom: 10px;
+      max-width: 25px;
+      align-self: center;
+    }
+  }
+}
+
+
+
